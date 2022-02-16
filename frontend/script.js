@@ -128,3 +128,49 @@ let i = h.anotherMethod("Hello")
 console.log(i);
 console.log(h.anotherMethod)
  */
+
+/* 
+let myString = "Mikkamakka";
+
+let mySecondString = myString;
+
+let myThirdString = "Mikkamakka"
+
+console.log(myString);
+console.log(mySecondString);
+console.log(myString === mySecondString);
+console.log(myString === myThirdString);
+ */
+let myObject = {
+    myString: "Mikkamakka"
+};
+
+let mySecondObject = myObject;
+
+let myThirdObject = {
+    myString: "Mikkamakka"
+};
+
+mySecondObject.myString = "Dömdödöm"
+
+let myFourthObject = {...myObject};
+
+myFourthObject.myString = "Vacskamati"
+
+console.log(myObject.myString);
+console.log(myFourthObject.myString);
+
+
+
+/* 
+console.log(myObject === mySecondObject);
+console.log(myObject === myThirdObject);
+
+ */
+
+/* 
+console.log("" === "");
+console.log({} === {});
+ */
+
+
