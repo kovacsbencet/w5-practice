@@ -128,14 +128,3 @@ let i = h.anotherMethod("Hello")
 console.log(i);
 console.log(h.anotherMethod)
  */
-
-function gettingDrunk(day){
-    let result;
-    if ( day === "saturday"){
-        result = 'Ihatnánk ma valamit';
-    } else {
-        result = 'Te figyelj ide hol a Zsolt?'
-    }
-    return result
-}
-console.log(gettingDrunk("saturday"));
