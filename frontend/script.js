@@ -141,6 +141,8 @@ console.log(mySecondString);
 console.log(myString === mySecondString);
 console.log(myString === myThirdString);
  */
+
+/* 
 let myObject = {
     myString: "Mikkamakka"
 };
@@ -160,7 +162,7 @@ myFourthObject.myString = "Vacskamati"
 console.log(myObject.myString);
 console.log(myFourthObject.myString);
 
-
+ */
 
 /* 
 console.log(myObject === mySecondObject);
@@ -172,5 +174,77 @@ console.log(myObject === myThirdObject);
 console.log("" === "");
 console.log({} === {});
  */
+
+
+
+
+/*------------IMDB DATA STRUCTURES------------*/
+
+
+/* 
+window.addEventListener("load", function(){
+    console.log("My page is loaded.")
+})
+ */
+function loadEvent() {
+    console.log("My page is loaded again.");
+
+    let rootElement = document.getElementById("root")
+
+/* 
+    let card =  function(movieRecieved){
+        return  `
+        <div class="card">
+            <h1>${movieRecieved.title}</h1>
+            <h2>${movieRecieved.year}</h2>
+            <h3>${movieRecieved.rate}</h3>
+        </div>
+        `;
+    };
+     */
+
+
+    let card2 =  function(title, year, rate){
+        return  `
+        <div class="card">
+            <h1>${title}</h1>
+            <h2>${year}</h2>
+            <h3>${rate}</h3>
+        </div>
+        `;
+    };
+
+    let anotherFavouriteMovie = {
+        "title": "The last Scout Boy",
+        "year": "1991",
+        "rate": "7.0"
+    }
+
+
+/* 
+    rootElement.insertAdjacentHTML("beforeend", card({
+        "title": "Inception",
+        "year": "2012",
+        "rate": "9.9"
+    }));
+
+    let actuallyFavouriteMovie = {
+        "title": "Eternal sunshine of a spotless mind",
+        "year": "2004",
+        "rate": "9.9"
+    }
+
+    rootElement.insertAdjacentHTML("beforeend", card(actuallyFavouriteMovie));
+    rootElement.insertAdjacentHTML("beforeend", card(movies[0])); 
+*/
+
+    rootElement.insertAdjacentHTML("beforeend", card2(anotherFavouriteMovie.title, anotherFavouriteMovie.year, anotherFavouriteMovie.rate))
+
+    for (const movieSend of movies) {
+        rootElement.insertAdjacentHTML("beforeend", card2(movieSend.title, movieSend.year, movieSend.rate))
+    }
+    console.log(movies);
+}
+window.addEventListener("load", loadEvent);
 
 

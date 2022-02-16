@@ -1,0 +1,17 @@
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+
+}
+
+#root .card{
+    background-color: darkorchid;
+    flex-grow: 1;
+    flex-basis: 25%;
+    height: 200px;
+    padding: 10px;
+}
