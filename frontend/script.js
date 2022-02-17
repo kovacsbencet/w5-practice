@@ -246,47 +246,35 @@ function loadEvent() {
     }
 
     let renderAllCardElements = function (incomingMoviesArray){
-        let renderedCardList = "";
+        let renderedCardList = `<div class="cards">`;
 
         for (const incomingMovie of incomingMoviesArray) {
-            // for ciklus minden lépcsőjénél hozzáadja a renderedCardList-hez az adott elemet a megfelelő div cardban
+            renderedCardList += card2(incomingMovie.title, incomingMovie.year, incomingMovie.rate)
+            
+            /* 
             renderedCardList += `
             <div class="card">
                 <h1>${incomingMovie.title}</h1>
                 <h2>${incomingMovie.year}</h2>
                 <h3>${incomingMovie.rate}</h3>
             </div>
-            `
+            ` 
+            */
         }
+        renderedCardList += `</div>`
         console.log(renderedCardList);
         return renderedCardList
-        // for ciklus ami végigmegy a cardsarrayen, amit paraméterként kaptunk meg
-
-        // returnöli az elkészült elemekkel feltöltött cardListet
 
     }
 
-/* 
-    movies.sort(function(a, b){return a.year - b.year});
- */ 
     let newGoodMovies = [];
-/* 
+
     for (const movieSend of movies) {
-        /* let newerThan2000 = false;
-        if (movieSend.year > 2000){
-            newerThan2000 = true;
-        }
-        if (newerThan2000){
-            rootElement.insertAdjacentHTML("beforeend", card2(movieSend.title, movieSend.year, movieSend.rate))
-        } */
-
-        //let floorRate = Math.floor(movieSend.rate);
-
         if (movieSend.year > 2000 && movieSend.rate >= 8){
             newGoodMovies.push(movieSend);
-            //rootElement.insertAdjacentHTML("beforeend", card2(movieSend.title, movieSend.year, floorRate))
         }
     }
+
 
     newGoodMovies.sort(function(a, b){return a.year - b.year});
 
